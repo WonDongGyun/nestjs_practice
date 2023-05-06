@@ -13,7 +13,8 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 			password: "4633877",
 			database: "practice",
 			entities: [User],
-			synchronize: true
+			synchronize: true,
+			logging: true
 		}),
 		UserModule
 	]
