@@ -17,13 +17,4 @@ export class UserService {
 		const user = await this.userRepository.findOneBy({ id, name });
 		return plainToInstance(FindUserReturnDTO, user);
 	}
-
-	async getUser2({ id, name }: User) {
-		return await this.userRepository.findOneBy({ id, name });
-	}
-
-	async get({ id, name }: FindUserDto) {
-		const user = await this.userRepository.findOneBy({ id, name });
-		return plainToInstance(FindUserReturnDTO, user);
-	}
 }
